@@ -12,5 +12,7 @@ Run `scripts/check_vendor.sh` to verify this snapshot without a sibling checkout
 For an additional comparison against the original repository, run
 `scripts/check_vendor.sh /path/to/SparseDivComplexity`.
 
-No license grant is added by vendoring these files; no license file was present in
-the source snapshot. The separately fetched dependencies retain their own licenses.
+These project-owned vendored sources are distributed under the repository's
+[Apache License 2.0](../LICENSE). Their contents remain byte-for-byte identical
+to the recorded source snapshot. Separately fetched dependencies retain their
+own licenses.

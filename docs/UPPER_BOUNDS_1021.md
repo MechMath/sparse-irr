@@ -1,4 +1,6 @@
-# 非独立稿第3节：整数不可约性上界
+# 论文第3节：整数不可约性上界
+
+论文：**Irreducibility Testing of Sparse Polynomials over Integers is NP-hard and Probabilistic Polynomial Time**。
 
 当前发布保留整数不可约性的 `PP` 和 `PSPACE` 上界、内部数论推导与已验证机器。
 本文献前提以定理参数记录，不添加全局公理，不把本文自己的结论作为假设。

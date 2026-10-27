@@ -3,11 +3,14 @@
 [中文说明](README.zh-CN.md) · [Paper correspondence](docs/PAPER_1021_MAP.md) ·
 [Dependencies and assumptions](docs/DEPENDENCIES.md)
 
-This repository publishes the **integer irreducibility results in Sections 2
-and 3** of the non-standalone manuscript `1021-AI4Math_Irreducibility.pdf`:
-unconditional complexity hardness, and the integer `PP`/`PSPACE` upper bounds
-under explicitly stated literature inputs. The supporting algebra, sparse
-binary programs and integer machine proofs are included.
+This repository contains the Lean 4 formalization of **Sections 2 and 3** of
+the paper:
+
+> **Irreducibility Testing of Sparse Polynomials over Integers is NP-hard and Probabilistic Polynomial Time**
+
+It includes unconditional complexity hardness and the integer `PP`/`PSPACE`
+upper bounds under explicitly stated literature inputs, together with the
+supporting algebra, sparse binary programs and integer machine proofs.
 
 ## Main results
 
@@ -90,10 +93,11 @@ are not separately claimed as formalized declarations.
 - [`Vendor/README.md`](Vendor/README.md): source provenance; [`scripts/`](scripts/): reproducible checks.
 
 Older reports retain their dates and original theorem numbering. Use the paper
-map for the numbering in the non-standalone manuscript.
+map for the numbering in the paper.
 
 ## Licensing
 
-No project-wide license has been specified in this snapshot. This README adds
-no license grant. Vendored provenance is documented separately, and fetched
-dependencies retain their own licenses.
+This repository is licensed under the **Apache License, Version 2.0**.
+See [LICENSE](LICENSE) for the full text. Vendored-source provenance is documented
+in [Vendor/README.md](Vendor/README.md); separately fetched dependencies retain
+their own licenses.

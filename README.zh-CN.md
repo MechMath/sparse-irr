@@ -2,8 +2,12 @@
 
 [English README](README.md) · [论文对应表](docs/PAPER_1021_MAP.md)
 
-当前发布范围为非独立稿 `1021-AI4Math_Irreducibility.pdf` 的**第2、3节整数不可约性结果**：
-无条件硬度证明，以及明确文献前提下的 `PP`／`PSPACE` 上界，包含内部数学推导和整数算法机器。
+本仓库提供论文
+
+> **Irreducibility Testing of Sparse Polynomials over Integers is NP-hard and Probabilistic Polynomial Time**
+
+的**第2、3节整数不可约性结果**的 Lean 4 形式化：无条件硬度证明，以及明确文献前提下的
+`PP`／`PSPACE` 上界，包含内部数学推导和整数算法机器。
 
 ## 主要结果
 
@@ -59,5 +63,7 @@ Frei–Sofos–Widmer，定理1.1** 提供有效计数；本项目通过 `Effect
 - [第3节机器实现报告](docs/SECTION3_MACHINE_IMPLEMENTATION_2026-10-22.md)
 - [依赖与前提](docs/DEPENDENCIES.md)
 
-本源码快照尚未指定统一许可证；本说明不增加授权条款。依赖保留各自许可证，
-vendored 来源见 [Vendor 说明](Vendor/README.md)。
+## 许可证
+
+本仓库采用 **Apache License 2.0**，完整条款见 [LICENSE](LICENSE)。
+单独获取的依赖保留各自许可证；vendored 文件来源见 [Vendor 说明](Vendor/README.md)。

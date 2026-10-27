@@ -1,6 +1,7 @@
-# 非独立稿第2、3节：编号与 Lean 入口
+# 论文第2、3节：编号与 Lean 入口
 
-核对日期：2026-10-27。对象为本地 `1021-AI4Math_Irreducibility.pdf`，共18页。
+论文：**Irreducibility Testing of Sparse Polynomials over Integers is NP-hard and Probabilistic Polynomial Time**。
+核对日期：2026-10-27；编号对应归档的18页论文版本。
 不是7页的 `AI4Math_Irreducibility.pdf`，也不是独立计数稿。
 论文 PDF 和未对应此版本的 TeX 草稿不是构建依赖，源码发布包不包含这些本地草稿。
 
