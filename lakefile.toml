@@ -1,0 +1,35 @@
+name = "sparseIrredHardness"
+version = "0.1.0"
+defaultTargets = ["SparseIrred"]
+
+# Formalization for the 18-page 1021-AI4Math_Irreducibility.pdf:
+# integer hardness, conditional integer PP/PSPACE, and unconditional uniform
+# finite-field PSPACE with complete binary machine certification.
+# The original Theorem 8 modules retain their historical names.
+#
+# Toolchain: leanprover/lean4:v4.34.0-rc2 (complexitylib's toolchain at the pinned commit).
+# complexitylib pinned at edd0e9ec3d7d2eb00afa978338e8585a4eab8152 (2026-09-05);
+# mathlib and the other packages are inherited transitively (revisions in lake-manifest.json).
+#
+# `Vendor/` holds a verbatim copy of the 38 modules of the local project SparseDivComplexity
+# (commit c76c0d4575171bf8131f7487649e565d40530f6e, libraries `SparseDivComplexity` and
+# `SparseGcd`) that this project imports (Cobham string arithmetic, sparse integer term lists,
+# CNF parsing); see Vendor/README.md. No path dependency remains.
+
+[[require]]
+name = "complexitylib"
+git = "https://github.com/SamuelSchlesinger/complexitylib"
+rev = "edd0e9ec3d7d2eb00afa978338e8585a4eab8152"
+
+[[lean_lib]]
+name = "SparseIrred"
+
+[[lean_lib]]
+name = "SparseDivComplexity"
+srcDir = "Vendor"
+globs = ["SparseDivComplexity.+"]
+
+[[lean_lib]]
+name = "SparseGcd"
+srcDir = "Vendor"
+globs = ["SparseGcd.+"]

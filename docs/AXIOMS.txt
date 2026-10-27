@@ -1,0 +1,743 @@
+'SparseIrred.irreducibility_coNPHard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.reducibility_NPHard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.irreducibility_NPHard_oneQuery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.P_eq_NP_of_irreducibility_mem_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.P_eq_NP_of_irreducibility_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.irreducibility_NPHard_oneQuery_of_codes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.irreducibility_coNPHard_of_SSS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.reducibility_NPHard_of_SSS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.irreducibility_NPHard_oneQuery_of_SSS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.P_eq_NP_of_irreducibility_mem_P_of_SSS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Hfinal_irreducible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Hfinal_irreducible_iff_of_SSS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.reduce_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.reduce_correct_of_SSS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.reduce_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.exists_negQuery_machine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.oneQueryReducesPoly_of_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.satisfiable_iff_not_isCoprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.exists_rootOfUnity_root_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.noncyclotomicPartIrreducible_Hfinal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.bound_lt_Mval_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.decodePoly_eq_some_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.irreducibility_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.satisfiability_encoding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.isRelPrime_of_rational_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.ljunggren_gapPoly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.irreducible_gapPoly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.exists_shifted_residue_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.lcm_primeCounting_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.prime_index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.Irreducibility.polynomial_time_sparse_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.adjugate_ne_zero_of_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.rank_eq_iff_exists_deleted_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.multiplicityStatistic_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.multiplicityStatistic_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.multiplicityStatistic_le_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.multiplicityStatistic_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.multiplicityStatistic_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.factorStatistic_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.factorStatistic_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_factorStatistic_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.resultant_derivative_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.not_irreducible_of_derivative_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.pow_card_eq_self_iff_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.mem_frobeniusFixedSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.scalar_mem_frobeniusFixedSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.finrank_frobeniusFixedSpace_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.finrank_frobeniusFixedSpace_eq_one_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.exists_nonscalar_fixed_of_coprime_factors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.irreducible_iff_frobeniusFixedSpace_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.frobenius_rank_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.irreducible_iff_resultant_and_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.finiteFieldTest_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.finiteFieldDecision_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.generator_matrix_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.frobeniusMatrix_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.generator_matrix_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.frobenius_rank_add_fixedSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.irreducible_iff_frobeniusMatrix_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.factor_product_root_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.weighted_root_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.weighted_root_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.irreducible_integer_constant_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_iff_primitive_and_rational' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeRootWeight_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeCountBelow_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.prime_counter_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_iff_root_threshold_of_approximation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.root_threshold_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.acceptanceBalance_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.majorityGadget_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.majorityGadget_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.majorityGadget_majority_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.multipleRootCount_le_rootCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.rootCount_le_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primitive_modular_root_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.derivative_at_factor_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.two_pow_three_mul_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffLog_ge_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoff_amplification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffLog_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.birdTransition_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.birdTransition_pow_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.determinantEntry_eq_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.splitDepth_le_of_le_pow' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.splitDepth_le_log' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.powerEntry_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.intervalProduct_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.productEntry_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.logIntegral_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffError_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffError_lt_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffError_mul_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoff_log_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoff_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoff_sqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoff_prime_error_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.prime_count_lower_at_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.relative_error_lt_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.relative_error_lt_quarter_of_analytic_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.relative_error_lt_quarter_of_prime_estimates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.relative_error_lt_quarter_of_counting_estimates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.cutoffError_lt_quarter_at_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.two_pow_primeFactors_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_primeFactors_card_le_log2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.exceptional_prime_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerL1_eq_sum_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerMahler_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerMahler_le_integerL1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerMahler_le_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_divisor_mahler_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_divisor_logMahler_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_divisor_coeff_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.exceptional_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.prime_root_field_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.weighted_higher_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.weighted_prime_ideal_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.prime_root_average_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.prime_root_average_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.prime_root_average_of_exceptional_primes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCountingCutoff_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeCounting_relative_error_of_estimates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_iff_primeCounting_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCounting_majority_iff_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCounting_choice_bits_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeCountBelow_eq_primeCounting'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeCountBelow_succ_of_not_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeRootSum_succ_of_not_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeCountBelow_eq_primeCounting_of_not_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCountBelow_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.binary_cutoff_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputCutoffExponent_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputCutoff_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.modularRootScanAux_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.modularRootIncrement_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.modularRootScanAux_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.modularRootScan_eq_primeRootWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeCountBelow_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeRootSum_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreamingStep_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreamingAux_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreaming_eq_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreaming_prefix_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.modularRootScan_prefix_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreaming_inner_prefix_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.root_counter_size_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreaming_prefix_bit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeStreaming_inner_prefix_bit_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.inputCutoff_counter_bit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sum_fin_restrict_zmod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.witnessCount_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.positivePrimeWitness_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.modularRootWitness_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.negativePrimeWitness_local_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.negativePrimeWitness_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeWitness_majority_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeWitness_choice_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeWitness_binary_majority_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_iff_primeWitness_majority_of_approximation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integerL1_toPolyZ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.raw_input_log_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputDelta_le_raw_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffLog_le_raw_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputCutoffExponent_le_raw_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputCutoff_size_le_raw_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.raw_streaming_counter_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.raw_inputCutoff_counter_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.encITerms_cons_length' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.absSum_add_one_le_pow_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.degreeZ_lt_pow_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerL1_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerL1_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.degree_lt_pow_encPoly_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integerL1_add_one_le_pow_encPoly_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.input_log_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputDelta_le_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputDelta_ge_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.cutoffLog_le_input_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputCutoffExponent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.inputCutoff_size_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.derivative_coeff_natAbs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.derivative_coeff_size_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.binaryPow_eq_pow' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.binaryPowDepth_le_of_lt_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.binaryPowDepth_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseEvalAux_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseEval_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseDerivativeEvalAux_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseDerivativeEval_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseEval_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseDerivativeEval_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseModularRootIncrement_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseModularRootScanAux_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseModularRootScan_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.degree_le_of_weighted_degree_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.weighted_discriminant_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.discriminant_expression_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.weighted_discriminant_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.exceptional_expression_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.exceptional_log_expression_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.exceptional_binary_log_expression_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integerSquarefreeExceptionalPrimes_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integerFactorization_good_prime_root_weight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integerFactorization_good_prime_root_weight_eq_degreeOne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integerFactorRootField_logDiscriminant_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integerFactorIndex_weighted_fieldLogDiscriminant_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_field_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average_of_not_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average_concrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average_of_not_prime_concrete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_iff_primeCounting_threshold_of_uniform_estimate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.rawList_irreducible_iff_primeCounting_test' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.rawList_irreducible_iff_primeCounting_majority' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.rawList_primeCounting_choice_bits_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.section3_uniform_arithmetic_conclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.polynomialPrimeCountingAcceptance_mem_Icc' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCountingAcceptance_mem_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.polynomialPrimeCountingAcceptance_gt_half_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCountingAcceptance_gt_half_iff_mem_IrredLang' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.irreducibility_mem_PP_of_primeCounting_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.irreducibility_mem_PP_and_PSPACE_of_primeCounting_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.section3_irreducibility_mem_PP_and_PSPACE' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.card_scheduledSeed_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.eventProb_scheduledSeed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.acceptProb_eq_verifier_fraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.guessFixedNTM_trace_eq_bounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.guessFixedNTM_writes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.guessFixedNTM_halts_with_seed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.guessFixedNTM_halts_with_exact_tape' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.fixedGuessSchedule_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.guessFixedNTM_hoareTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.fixedGuessVerifyNTM_allPathsHaltIn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.fixedGuessVerifyNTM_polynomial_time' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.fixedGuessVerifyNTM_guess_start_decides' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.precompose_allPathsHaltIn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.precompose_acceptProb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.exists_polynomial_precompose' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.decodePoly_eq_map_decodeTerms' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.validCode_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.validCode_eq_true_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.cutoffExponentStr_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.cutoffExponentStr_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.cutoffUnary_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.cutoffUnary_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseEvalModStr_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.sparseEvalModStr_encoded_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.primeMajorityStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.executableEncodedAcceptance_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.executableEncodedAcceptance_gt_half_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.encodedPrimeChoice_bits_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.encodedVerifierStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.encodedVerifierStr_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.seedPrimeChoices_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.eventProb_seedPrimeChoices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.randomSeedVerifier_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.randomSeedVerifier_eventProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.eventProb_of_suffix_ignored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.padPrimeInput_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.exists_paddedPrimeVerifier_decider' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.paddedPrimeVerifier_eventProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.fixedGuessVerify_setup_uniform' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.fixedGuessVerifyNTM_acceptProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.primeCountingAlgorithmCertificate_of_binaryPrimalityInFP' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.irreducibility_mem_PP_and_PSPACE_of_external_theorems' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.section3_irreducibility_mem_PP_and_PSPACE_of_external_theorems' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.mem_primesLEReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.mem_primeIdealsLEReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.effectivePrimeIdealEstimateReal_to_integer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_field_comparison_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average_concrete_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average_concrete_real_of_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.effectivePrimeIdealEstimate_scaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.exists_integer_scaled_primeIdeal_estimate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_prime_root_average_concrete_scaled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.scaledCutoffError_lt_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.scaled_relative_error_lt_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.scaledInputCutoffExponent_le_raw_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.integer_irreducible_iff_scaledPrimeCounting_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.cutoffExponentStr_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.cutoffUnary_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.encodedPrimeChoice_bits_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.randomSeedVerifier_mem_FP' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.randomSeedVerifier_eventProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.paddedPrimeVerifier_eventProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.exists_primeCounting_machine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.irreducibility_mem_PP_and_PSPACE' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.GeneralGap.section3_irreducibility_mem_PP_and_PSPACE_of_positive_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamCounts_eq_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamCounts_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamCounts_prefix_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamVerdict_counts_iff_mem_IrredLang' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamStepStr_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamStepStr_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.stream_iterate_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.stream_iterate_done' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.stream_iterate_length_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamingIterationMachine_allPrefixes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamingIterationMachine_halts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.streamingMachine_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.section3_deterministic_streaming_mem_PSPACE' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryModLoop_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryModLoop_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryModLoop_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.framedMod_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.framedMod_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.framedMod_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPrime_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPrime_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPrime_flag_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPrime_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPow_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPow_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryPow_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryTerm_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryTerm_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryTerm_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.packedInputTM_computesInTime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.packedInputTM_allPrefixes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.inputReadBit_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.inputReadBit_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.frameInput_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.frameInput_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.frameInput_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.frameInput_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.unpackInput_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.unpackInput_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.unpackInput_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.unpackInput_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.parseTerm70_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.parseTerm70_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.parseTerm70_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.parseTerm70_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryEq70_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryEq70_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryEq70_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.branchZeroSelected_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.branchZeroSelected_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySignedEvalTerm_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySignedEvalTerm_accumulators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.signedEvalFold_eq_iff_eval_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_flag_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_values_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binarySparseEval_silent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.completeCell_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.completeCell_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.completeCell_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.completeCellSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.completeCell_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.completeCell_silent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreEnumeration_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreEnumeration_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreEnumeration_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreEnumeration_eq_paper_counts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreNumericWidth_size_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreVerdict_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreVerdict_emitted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.coreVerdict_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.binaryRoutine_linear_hoareSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.section3BinaryCore_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.section3BinaryCore_requires' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.section3BinaryCore_emitted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Machine.section3BinaryCore_space_linear' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Machine.section3_linear_streaming_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.finrank_frobeniusFixedSpace_eq_distinctFactorCount' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.frobeniusMatrix_rank_eq_degree_sub_distinctFactorCount' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.irreducible_iff_coefficient_oracle_tests' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitz_coeff_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.indexedBerkowitzDeterminant_eq_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitzProgram_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitzProgram_addresses_bounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.frobeniusEntryProgram_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.minorProgram_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.polynomialProgram_halts_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.polynomialProgram_rank_input' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.coefficientOracleDecision_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.headerDecision_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.stagedHeaderDecision_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.Structural.degree_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.card_carrier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.elementEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.element_addElements' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.FieldCode.element_mulElements' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.Input.scalar_encoding_length_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.Input.polynomial_degree_size_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.Input.field_card_size_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.scanStep_register_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.primeDivisorProgram_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.preflightAnswer_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformStages_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.ThreeStages.meaning_step' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.Section4.ThreeStages.work_step_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.ThreeStages.stop_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformStages_work_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformStages_time_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.LocalControlStepFP.trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.LocalControlStepFP.language_mem_PSPACE' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.EntryConfig.encode_injective' depends on axioms: [propext]
+'SparseIrred.UpperBounds.Section4.EntryProgram.restrict_value' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformCode_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4_irreducibility_mem_PSPACE' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4_machine_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitz_toeplitz_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitzFactors_prod_mulVec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitzFactors_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.berkowitzWithEntryProgram_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.lemma17_space_composition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.Input.frobenius_exponent_size_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformDecision_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformCode_ne_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformStreamingTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.lemma17_faithful_space_composition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformCode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.cobham_foldBlocks_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryStackStep_correct' depends on axioms: [propext]
+'SparseIrred.UpperBounds.Section4.cobham_binaryStackStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryDecisionAdd_correct' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryDecisionMul_correct' depends on axioms: [propext, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformBinaryStep_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.uniformBinaryStep_realization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldAddStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldMulStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldPowStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldInvStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldNormalizeStr_mem_FPn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldMulStr_encoded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldInvStr_encoded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldCardStr_encoded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.fieldDecodeNormalizeStr_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.sparseCoefficientStr_encoded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.cobham_sparseCoefficientStr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.sparseDegreeStr_encoded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.cobham_sparseDegreeStr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.sparseLeadingInverseStr_encoded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.primePolynomialDerivativeDegreeStr_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.preflightStructuralStr_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.coefficientCanonicalStr_eq_decide' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.polynomialInstructionStr_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.cobham_polynomialInstructionStr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.firstStageRoutines_realization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryModulusStage_realization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryExtensionStage_realization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4BinaryStep_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4BinaryStep_realization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4_irreducibility_mem_PSPACE_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4_complete_machine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4BinaryStep_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4BinaryStep_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.section4BinaryStep_publish' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.oracle_exists_first_halt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.oracleStep_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.oracleOutput_code' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.oracleStep_iterate_code' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.EntryMachineSource.returned_code' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.oracleDispatch_code' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.oracleValueTM_keepsWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.publishWorkTM_hoareTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.valueMachine_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.OracleScalarCompilerLaws.machine_exists' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.OracleScalarCompilerLaws.machine_exists_of_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.controllerPlainStep_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.controllerHasQuery_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.controllerQueryInput_mem_FP' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.controllerResume_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryBerkowitzController_laws' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryBerkowitzInitialize_mem_FP' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryBerkowitzLoop_setup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryBerkowitzLoop_completed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.binaryBerkowitzLoop_verdict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.MatrixEntryMachine.controller_space' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.MatrixEntryMachine.compiler_laws' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.OracleDomainCompilerLaws.machine_exists_of_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SparseIrred.UpperBounds.Section4.lemma17_uniform_scalar_machine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
