@@ -1,22 +1,10 @@
 # Dependency audit (hardness and upper-bound ingredients)
 
-Machine-checked results including the original Section 3 and complete Section 4 machines,
-2026-10-23 (reproduce with
-`scripts/audit.sh` and `lake env lean scripts/DepAudit.lean`):
-
-* `lake build` succeeds (9468 jobs); no `sorry`, `admit`, `axiom` declaration, `native_decide`,
-  `implemented_by`, `extern` or `unsafe` anywhere in `SparseIrred/`.
-* `#print axioms` of all 479 audited declarations, including the Theorem 8 entry points,
-  their `_of_SSS` variants, the statements in `Irreducibility.lean`, and 448 theorem entry points
-  in `UpperBounds/`, reaches only subsets of `[propext, Classical.choice, Quot.sound]`
-  (`docs/AXIOMS.txt`).
-* **Transitive closure** (`docs/DEP_AUDIT.txt`): 463 roots (the previous 15 entry points and
-  448 upper-bound entry points) reach 84,756 constants (Mathlib 61,433;
-  Init 7,921; complexitylib 8,534; this project 5,880; vendored SparseDivComplexity 545 and SparseGcd
-  230; Batteries 211; Std 1; Aesop 1). The only axioms reached are `propext`, `Quot.sound` and
-  `Classical.choice`. The closure contains complexitylib's own proofs of Cook–Levin, Tseitin,
-  3SAT NP-hardness (`ThreeSAT.NPHard_language`), the Cobham characterization of FP and the TM model, so none of these is
-  assumed.
+The published scope is integer irreducibility in Sections 2 and 3. Reproduce the
+build, proof-dependency and vendor checks with `scripts/audit.sh`. Current audit
+counts and results are recorded in [RELEASE_2026-10-27.md](RELEASE_2026-10-27.md).
+Only `propext`, `Classical.choice` and `Quot.sound` are permitted in the audited
+closure. This checks the proof terms, not the named literature premises.
 
 ## 1. Existing Lean results actually used (not re-proved here)
 
@@ -26,7 +14,7 @@ Machine-checked results including the original Section 3 and complete Section 4 
 | complexitylib `edd0e9ec`, integer upper-bound conclusion | Actual NTM semantics, deterministic-to-nondeterministic machine composition, `PPTIME`/`PP` definitions and the proved containment `PP_subset_PSPACE`. This project constructs the Section 3 machine and proves its polynomial running time and exact finite-witness acceptance fraction. |
 | SparseDivComplexity `c76c0d4` (sibling project; 38 modules vendored verbatim in `Vendor/`) | sparse integer term lists `ITerms`, `toPolyZ`, `NormalizedZ`, `normalizeZ`; bit-string encodings `encNat`, `encInt`, `encITerm`, `encITerms`, `decITerms`, `decITerms_encITerms`; Cobham string arithmetic (`addBits`, `subBits`, `mulBits`, `divBits`, `ltBits`, `canonBits`, `normalizeZStr`, `mapBlocks`/`foldBlocks`) with FP/Cobham lemmas; SparseGcd `parseCnfStr` (CNF parsing in FP), `TermsStr`/`ArithStr` helpers |
 | mathlib `e06eff5f` | `Irreducible`, `Polynomial`, `LaurentPolynomial` (`trunc`, `invert`, `eval₂`), cyclotomic polynomials and `cyclotomic_eq_minpoly_rat`, `IsPrimitiveRoot`, `Algebra.norm`, `Algebra.norm_eq_prod_embeddings`, `Algebra.isIntegral_norm`, `IsIntegrallyClosed`, number fields/`IntermediateField.adjoin`, Gauss's lemma `IsPrimitive.Int.irreducible_iff_irreducible_map_cast`, `isCoprime_iff_aeval_ne_zero_of_isAlgClosed`, `Nat.chineseRemainderOfFinset`, `Nat.nth` primes, `Chebyshev.two_pow_le_mul_lcmUpto`, Ljunggren's `Polynomial.irreducible_of_mirror`, `Polynomial.mirror`, Eisenstein criterion, `RatFunc`, real `log`/`exp` bounds, intermediate value theorem |
-| mathlib `e06eff5f`, upper-bound ingredients | normalized irreducible factors with multiplicities; finite-field Frobenius algebra homomorphisms; `AdjoinRoot` power bases; separability and resultants; rank-nullity and rank normal form; adjugates; Bird's division-free determinant correctness (`Matrix/Determinant/Bird/Correctness.lean`) |
+| mathlib `e06eff5f`, integer upper-bound ingredients | normalized irreducible factors with multiplicities; number fields and rings of integers; `AdjoinRoot` power bases; discriminants; prime ideals and polynomial roots; real logarithmic estimates |
 
 ## 2. Proved in this project
 
@@ -41,9 +29,8 @@ implementation and all size bounds (`Machine/*`, including the explicit bound
 oracle machine (`Oracle/OneQuery.lean`), the Theorem 8 entry points (`Theorem8.lean`), and the
 standalone irreducibility paper's statements (`Irreducibility.lean`, see `docs/IRREDUCIBILITY_AUDIT.md`).
 
-`UpperBounds/` adds the local root-count identities, factor statistic, numerical cutoff bounds,
-majority count, finite-field Frobenius/minor criterion, and a determinant entry oracle using a
-linearized Bird transition. See [the coverage history](UPPER_BOUNDS_1021.md).
+`UpperBounds/` adds the local root-count identities, factor statistic, numerical cutoff bounds
+and majority count. See [the integer upper-bound overview](UPPER_BOUNDS_1021.md).
 The independent prime-counting continuation adds global-error and cutoff inequalities, concrete
 witness counts, streaming/sparse-evaluation correctness, Mahler bounds, and bit bounds for original
 unnormalized input lists. `section3_uniform_arithmetic_conclusion` in `Section3Arithmetic.lean`
@@ -111,24 +98,3 @@ are internally proved. Remark 16's arbitrary fixed positive gap and real-cutoff 
 are also proved. See [the exact interfaces](SECTION3_COMPLETION_2026-10-22.md).
 The audits certify these conditional theorems and constructed implementations, not the explicitly
 parameterized external analytic and AKS literature inputs.
-
-## Original Section 4
-
-`Section4.section4_irreducibility_mem_PSPACE` has no additional external mathematical theorem
-parameters. The Berkowitz, Frobenius, CRT factor-count and rank/minor deductions are proved
-internally. A field header is verified by trial division and the same polynomial irreducibility
-test over the prime field; neither primality nor header irreducibility is an oracle premise.
-
-The older conditional theorem retains `Section4.UniformLocalStepRealization G` for compatibility.
-The 2026-10-23 implementation proves `section4BinaryStep_realization`, supplying that interface
-from the concrete binary program. The final `section4_irreducibility_mem_PSPACE_unconditional`
-and `section4_complete_machine` therefore have no mathematical or implementation parameters.
-Finite-field arithmetic, input validation, coefficient queries, address dispatch and stack
-operations all have internal uniform Cobham/FP and simulation proofs. See
-[the complete machine certification](SECTION4_MACHINE_CERTIFICATION_2026-10-23.md).
-
-The generic `lemma17_uniform_scalar_machine` retains only `MatrixEntryMachine M A space`,
-the actual entry machine's output/termination and `WithinDecisionSpace` contract. Its controller,
-field operations, dispatch, simulation and complete scalar-output epilogue are instantiated
-internally. The contract includes an output-head window; no equivalence with every weaker
-auxiliary-space-only transducer contract is asserted.

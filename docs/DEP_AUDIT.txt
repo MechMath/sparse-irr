@@ -1,10 +1,10 @@
-constants reached: 84756
-  package Mathlib: 61433
-  package Complexitylib: 8534
-  package Init: 7921
-  package SparseIrred: 5880
-  package SparseDivComplexity: 545
-  package SparseGcd: 230
+constants reached: 81347
+  package Mathlib: 60732
+  package Complexitylib: 8460
+  package Init: 7837
+  package SparseIrred: 3333
+  package SparseDivComplexity: 544
+  package SparseGcd: 228
   package Batteries: 211
   package Std: 1
   package Aesop: 1
@@ -13,11 +13,6 @@ constants reached: 84756
   module Complexitylib.Asymptotics.PolynomialComposition: 1
   module Complexitylib.Circuits.Encoding.Machine.NatCode.Internal: 1
   module Complexitylib.Classes.Containments: 5
-  module Complexitylib.Classes.Containments.Internal.BlockSearch: 4
-  module Complexitylib.Classes.Containments.Internal.CodeRewind: 20
-  module Complexitylib.Classes.Containments.Internal.CodeStep: 9
-  module Complexitylib.Classes.Containments.Internal.ConfigCount: 28
-  module Complexitylib.Classes.Containments.Internal.FPBridge: 5
   module Complexitylib.Classes.Containments.Internal.PPAssemble: 282
   module Complexitylib.Classes.Containments.Internal.PPBody: 8
   module Complexitylib.Classes.Containments.Internal.PPLayout: 78
@@ -35,7 +30,7 @@ constants reached: 84756
   module Complexitylib.Classes.NP.CoNP: 7
   module Complexitylib.Classes.NP.Internal.PairBuildTM: 189
   module Complexitylib.Classes.NP.Reduction: 7
-  module Complexitylib.Classes.P.Cobham: 6
+  module Complexitylib.Classes.P.Cobham: 5
   module Complexitylib.Classes.P.Cobham.Defs: 17
   module Complexitylib.Classes.P.Cobham.Internal: 104
   module Complexitylib.Classes.P.Cobham.Internal.Algebra: 38
@@ -77,7 +72,7 @@ constants reached: 84756
   module Complexitylib.Classes.Space: 1
   module Complexitylib.Classes.Time: 4
   module Complexitylib.Encoding.Delimit: 34
-  module Complexitylib.Encoding.Pairing: 24
+  module Complexitylib.Encoding.Pairing: 21
   module Complexitylib.Mathlib.FinsetPrefixes: 10
   module Complexitylib.Mathlib.NatBits: 20
   module Complexitylib.Models.TuringMachine: 202
@@ -147,9 +142,9 @@ constants reached: 84756
   module Complexitylib.Models.TuringMachine.Oracle.Defs: 35
   module Complexitylib.Models.TuringMachine.Oracle.Internal: 3
   module Complexitylib.Models.TuringMachine.OutputBounds: 2
-  module Complexitylib.Models.TuringMachine.OutputSemantics: 5
+  module Complexitylib.Models.TuringMachine.OutputSemantics: 4
   module Complexitylib.Models.TuringMachine.OutputSemantics.Defs: 3
-  module Complexitylib.Models.TuringMachine.OutputSemantics.Internal: 9
+  module Complexitylib.Models.TuringMachine.OutputSemantics.Internal: 7
   module Complexitylib.Models.TuringMachine.Placement: 4
   module Complexitylib.Models.TuringMachine.Placement.Defs: 26
   module Complexitylib.Models.TuringMachine.Placement.Internal: 9
@@ -170,7 +165,6 @@ constants reached: 84756
   module Complexitylib.Models.TuringMachine.SingleTape.Internal.Delta: 47
   module Complexitylib.Models.TuringMachine.SingleTape.Internal.Pad: 9
   module Complexitylib.Models.TuringMachine.SingleTape.Internal.Sim: 17
-  module Complexitylib.Models.TuringMachine.SpaceTime.Defs: 1
   module Complexitylib.Models.TuringMachine.SpaceTime.Internal.Reachability: 3
   module Complexitylib.Models.TuringMachine.Subroutines: 56
   module Complexitylib.Models.TuringMachine.Subroutines.BinaryAdd: 3
@@ -298,13 +292,13 @@ constants reached: 84756
   module SparseDivComplexity.Encoding: 7
   module SparseDivComplexity.StringArith.Add: 29
   module SparseDivComplexity.StringArith.Blocks: 73
-  module SparseDivComplexity.StringArith.DivMod: 76
+  module SparseDivComplexity.StringArith.DivMod: 75
   module SparseDivComplexity.StringArith.Gcd: 33
   module SparseDivComplexity.StringArith.Mul: 8
   module SparseDivComplexity.StringArith.Sub: 71
   module SparseDivComplexity.StringArith.Succ: 14
   module SparseGcd.Field.Construction: 1
-  module SparseGcd.Machine.ArithStr: 62
+  module SparseGcd.Machine.ArithStr: 60
   module SparseGcd.Machine.CnfStr: 118
   module SparseGcd.Machine.TermsStr: 48
   module SparseGcd.Machine.TrialData: 1

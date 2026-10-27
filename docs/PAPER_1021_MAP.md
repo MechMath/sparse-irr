@@ -1,11 +1,11 @@
-# 18页非独立稿：全篇编号与 Lean 入口
+# 非独立稿第2、3节：编号与 Lean 入口
 
 核对日期：2026-10-27。对象为本地 `1021-AI4Math_Irreducibility.pdf`，共18页。
 不是7页的 `AI4Math_Irreducibility.pdf`，也不是独立计数稿。
 论文 PDF 和未对应此版本的 TeX 草稿不是构建依赖，源码发布包不包含这些本地草稿。
 
 统一导入 `SparseIrred`。本表中 `I.` = `SparseIrred.Irreducibility`，
-`UB.` = `SparseIrred.UpperBounds`，`S4.` = `SparseIrred.UpperBounds.Section4`。
+`UB.` = `SparseIrred.UpperBounds`。当前发布只包含整数不可约性的第2、3节。
 源码文件中的早期编号注释未全部改写；例如 `Irreducibility.lean` 的旧定理2–引理7对应
 本稿的定理4–引理9。
 
@@ -15,7 +15,6 @@
 |---|---|---|---|
 | 例1 | `X^p−1` 的完整因式分解输出长度障碍 | 没有专门声明 | 说明性例子未单独形式化，不将其算作已证明 Lean 定理。 |
 | 定理2 | 整数硬度与 `PP`、`PSPACE` 上界 | `I.irreducibility_hardness`；`UB.section3_irreducibility_mem_PP_and_PSPACE_of_external_theorems` | 硬度无条件；上界使用下述外部输入。 |
-| 定理3 | 有限域上的均匀 `PSPACE` | `S4.section4_irreducibility_mem_PSPACE_unconditional` | 无数学或实现参数。 |
 | 定理4 | 四项硬度结论，含一次 oracle 查询与 `P=NP` 推论 | `I.irreducibility_hardness`，[`Irreducibility.lean`](../SparseIrred/Irreducibility.lean) | many-one coNP-hardness 与一次查询 Turing NP-hardness 明确区分。 |
 | 引理5 | SAT 载体、互素性与单位根 | `I.satisfiability_encoding` | 任意 gap 的单位根刻画；包含载体的非零与倒数对称性。 |
 | 定理6 | gap 判据、倒数乘积刚性及不可约性 | `I.ljunggren_gapPoly`、`I.irreducible_gapPoly` | 专门化的 FFK 证明，非额外外部假设。 |
@@ -29,8 +28,6 @@
 | 引理14 | 截断放大、素数下界、误差和位数 | `UB.cutoff_amplification`、`UB.prime_count_lower_at_cutoff`、`UB.relative_error_lt_quarter_of_counting_estimates`、`UB.inputCutoffExponent_le_raw_length` | 内部数值推导及输入长度界。 |
 | 推论15 | 不可约性等价于 `2*A < 3*P` | `UB.integer_irreducible_iff_primeCounting_threshold_of_uniform_estimate` | 接受外部计数估计，内部证明阈值。 |
 | 备注16 | 任意固定正间隙 | `UB.GeneralGap.section3_irreducibility_mem_PP_and_PSPACE_of_positive_gap` | 固定 `δ>0`，不是随输入缩小的间隙。 |
-| 引理17 | 条目空间机到行列式空间机 | `S4.lemma17_uniform_scalar_machine`，[`OracleMachineLemma17.lean`](../SparseIrred/UpperBounds/Section4/OracleMachineLemma17.lean) | 真实条目机的正确性和配置空间界是引理输入；全部控制和编译已证明。 |
-| 定理18 | 有限域稀疏不可约性的实际统一机器 | `S4.section4_irreducibility_mem_PSPACE_unconditional`、`S4.section4_complete_machine`，[`BinaryConclusion.lean`](../SparseIrred/UpperBounds/Section4/BinaryConclusion.lean) | 验证全部原始输入；无数学或实现参数。 |
 
 因此，发布范围是这些编号数学结果及其实现。它不表示已经重新证明所有引用文献，或将
 每一条背景叙述、例子和开放问题都转成 Lean 声明。
@@ -43,14 +40,10 @@
 | 第3节式 (29)–(44) | 模根、重因子统计、好约化、判别式、平均估计、截断和阈值 | [第3节 term 表](SECTION3_LEAN_MAP.md)。 |
 | §3.6 | 确定性枚举、二进制寄存器与空间界 | [第3节完成报告](SECTION3_COMPLETION_2026-10-22.md)。 |
 | §3.7 | 严格多数接受的实际 NTM、预处理、精确接受概率、多项式时限 | [机器实现报告](SECTION3_MACHINE_IMPLEMENTATION_2026-10-22.md)。 |
-| 式 (47) | Schur/形式幂级数推导、Berkowitz Toeplitz 递推和补零连乘 | [第4节数学表](SECTION4_FORMALIZATION_2026-10-22.md)。 |
-| 式 (48) | Frobenius 条目等于伴随矩阵幂条目 | 同上。 |
-| 式 (49) | CRT、不动空间维数等于不同因子数、秩与子式判据 | 同上。 |
-| 第4节全部计算步骤 | 均匀有限域编码、原始输入验证、二进制域运算、稀疏查询、地址栈、真实 TM 及全前缀空间 | [完整机器认证报告](SECTION4_MACHINE_CERTIFICATION_2026-10-23.md)。 |
 
 §3.6 的 `section3_linear_streaming_core` 从明确预处理好的 `section3CoreStart` 出发。
 全输入 `PSPACE` 入口和这一线性空间核心是不同规格；报告不把后者说成从任意原始输入
-开始的端到端线性空间机器。第4节的实际机器覆盖所有原始输入。
+开始的端到端线性空间机器。
 
 ## 外部引用的准确编号
 
@@ -67,11 +60,6 @@
 最终整数上界假设的是**有效计数结论**，不是从裸零点自由命题到计数估计的已证明 Lean
 桥接。本文的平均估计、阈值和最终上界均在此之后内部证明。
 目标稿的 **[3] Cantor–Zassenhaus** 是稠密因式分解文献，不是计数前提。
-第4节最终结论不使用以上解析数论或 AKS 前提。
-
-引理17的输入契约为 `MatrixEntryMachine`：实际条目 TM 在每个可达配置上满足
-`WithinDecisionSpace`，并终止输出正确完整标量编码。配置空间包含输出头界；这里未
-声称它等同于所有仅限制辅助空间、允许单向输出头无限空走的 `ComputesInSpace` 见证。
 
 ## 验证
 

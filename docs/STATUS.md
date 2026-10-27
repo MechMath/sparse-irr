@@ -1,7 +1,7 @@
 # Status of the Theorem 8 formalization
 
-For the public release of the complete 18-page manuscript formalization, start with
-[the README](../README.md) and [the whole-paper map](PAPER_1021_MAP.md).
+For the public release of the integer Sections 2 and 3 formalization, start with
+[the README](../README.md) and [the integer-results map](PAPER_1021_MAP.md).
 The older theorem numbering and development history below are retained for context.
 The latest build/audit run is recorded in [the release record](RELEASE_2026-10-27.md).
 
@@ -11,13 +11,8 @@ and machine implementations may be omitted, but the final conclusion must be a L
 This policy applies to subsequent work in this project. In particular, the integer `PP` and
 `PSPACE` conclusions are required targets, rather than being excluded with the machine construction.
 
-**Historical 2026-10-21 snapshot:** the new 18-page `1021-AI4Math_Irreducibility.pdf` adds upper bounds in
-Sections 3 and 4. These were absent from the original repository. The first `UpperBounds/` pass
-proved 59 supporting results, including the repeated-factor statistic, the local weighted-root
-identity, the cutoff amplification and majority count, the Berlekamp criterion, and correctness
-of an entry-based determinant/minor test over arbitrary finite fields. At that point the integer
-`PP` and finite-field `PSPACE` membership theorems had not been proved. See [the coverage table and
-remaining obligations](UPPER_BOUNDS_1021.md). The hardness theorems below remain complete.
+The publication covers the integer hardness and upper-bound results. The detailed
+[paper map](PAPER_1021_MAP.md) records the precise statements and external inputs.
 
 The continuation from `sparse_irreducibility_complete_qrh.pdf` added 112 public theorems covering
 conditional global-error aggregation, the explicit cutoff, witness counts, streaming, sparse
@@ -49,17 +44,6 @@ gap, and Proposition 13 supports real cutoffs. See
 A Chinese [Section 3 completion report](SECTION3_COMPLETION_2026-10-22.md) and
 [paper-to-Lean correspondence](SECTION3_LEAN_MAP.md) record the completed results, remaining
 premises, and the exact declarations for the paper's theorems and formulas.
-
-Original Section 4 now has its own [formalization report and term map](SECTION4_FORMALIZATION_2026-10-22.md).
-`UpperBounds/Section4Complete.lean` includes the original Berkowitz identity (47), Frobenius formula
-(48), full CRT factor-count/rank identity (49), arbitrary entry-oracle space composition, and the
-uniform binary language with field-header validation. The complete mathematical program's
-correctness, termination, and binary state bounds are proved. Its final
-`section4_irreducibility_mem_PSPACE_unconditional` now has no mathematical or implementation
-parameter. `section4BinaryStep_realization` constructs the old local-step interface from the
-actual binary program, and `section4_complete_machine` proves every-prefix space and correct
-termination of a fixed deterministic machine for all raw inputs. See
-[the complete binary machine report](SECTION4_MACHINE_CERTIFICATION_2026-10-23.md).
 
 The later `AI4Math_Irreducibility.pdf` has also been checked against the code (2026-10-19).
 Its Theorem 2 has the same four conclusions. `SparseIrred/Irreducibility.lean` exposes its numbered
@@ -94,16 +78,9 @@ explicit hypothesis (`*_of_SSS`).
   run (`reachesInQ`), polynomial time bound, correctness for every oracle deciding the target.
 * Core semantics: `Hfinal_irreducible_iff (Φ) (hΦ : Φ ≠ []) : Irreducible (Hfinal Φ) ↔ ¬Φ.Satisfiable`.
 
-Checks including the Section 3 and complete Section 4 machine additions, 2026-10-23
-(reproduce with `scripts/audit.sh`):
-`lake build` succeeds (9468 jobs); no `sorry`/`admit`/axiom
-declarations/`native_decide`/`implemented_by`/`extern`/`unsafe` in `SparseIrred/`; `#print axioms`
-of every audited entry point uses only `propext`, `Classical.choice`, `Quot.sound`
-(`docs/AXIOMS.txt`, 479 declarations);
-the transitive dependency closure (84,756 constants from 463 entry points, including all library proofs used)
-reaches no other axiom
-(`docs/DEP_AUDIT.txt`, `scripts/DepAudit.lean`). Vendored modules are byte-identical to their source
-commit (`scripts/check_vendor.sh`).
+The build and audit results for the current integer-only publication are recorded in
+[the release record](RELEASE_2026-10-27.md). `scripts/audit.sh` checks every retained
+entry point and rejects unexpected axioms. Vendor hashes match the source snapshot.
 
 Historical review: a 9-reviewer adversarial review with two skeptics per finding
 found no mathematical or faithfulness defect. Confirmed findings (all minor after verification; two had
@@ -125,10 +102,6 @@ are now covered by `UpperBounds/Section3Complete.lean`.
 Its current scope is described in
 [PRIME_COUNTING_QRH.md](PRIME_COUNTING_QRH.md), while
 [UPPER_BOUNDS_1021.md](UPPER_BOUNDS_1021.md) preserves the initial coverage audit.
-The finite-field continuation now has its complete binary implementation, unconditional PSPACE
-conclusion and deterministic machine certification in `UpperBounds/Section4Complete.lean`.
-The former local FP implementation interface is instantiated by the proved binary program; see
-[the Section 4 machine report](SECTION4_MACHINE_CERTIFICATION_2026-10-23.md).
 Other items outside the original hardness proof:
 
 1. The Sawin–Shusterman–Stoll large-gap theorem itself (`SSSLargeGap`). It is used only as the

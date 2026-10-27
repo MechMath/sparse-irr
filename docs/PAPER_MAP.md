@@ -6,10 +6,8 @@ For the 2026-10-21 Section 3 upper bound, including the verified Section 3.7 mac
 final theorem with external analytic and AKS premises, see
 [the Section 3 completion report](SECTION3_COMPLETION_2026-10-22.md).
 [UPPER_BOUNDS_1021.md](UPPER_BOUNDS_1021.md) preserves the earlier coverage history.
-The original Section 4 formulas and mathematical program are mapped in
-[the Section 4 report](SECTION4_FORMALIZATION_2026-10-22.md). The subsequent concrete binary
-implementation and final PSPACE/machine theorems without implementation premises are described
-in [the complete machine report](SECTION4_MACHINE_CERTIFICATION_2026-10-23.md).
+The current publication covers integer irreducibility in Sections 2 and 3;
+see [the manuscript correspondence](PAPER_1021_MAP.md).
 The subsequent standalone prime-counting note and its new formalizations are mapped in
 [PRIME_COUNTING_QRH.md](PRIME_COUNTING_QRH.md).
 

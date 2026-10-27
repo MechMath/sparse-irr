@@ -13,11 +13,4 @@
 
 第 3 节当前范围和主要入口见 [docs/PRIME_COUNTING_QRH.md](docs/PRIME_COUNTING_QRH.md)。
 
-第 4 节当前范围、最终定理及低层局部实现接口见
-[docs/SECTION4_FORMALIZATION_2026-10-22.md](docs/SECTION4_FORMALIZATION_2026-10-22.md)。
-用户于 2026-10-23 进一步要求第 4 节的算法、低层二进制实现、通用 oracle 协程编译及
-完整机器认证均补齐，不再省略这部分实现。原 `UniformLocalStepRealization` 已由实际
-`section4BinaryStep` 的证明构造；当前无实现参数的最终入口是
-`section4_irreducibility_mem_PSPACE_unconditional` 和 `section4_complete_machine`。
-最新机器认证情况见
-[docs/SECTION4_MACHINE_CERTIFICATION_2026-10-23.md](docs/SECTION4_MACHINE_CERTIFICATION_2026-10-23.md)。
+发布范围为整数不可约性的第2、3节；后续修改保持这一发布范围。

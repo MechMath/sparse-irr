@@ -2,9 +2,8 @@ name = "sparseIrredHardness"
 version = "0.1.0"
 defaultTargets = ["SparseIrred"]
 
-# Formalization for the 18-page 1021-AI4Math_Irreducibility.pdf:
-# integer hardness, conditional integer PP/PSPACE, and unconditional uniform
-# finite-field PSPACE with complete binary machine certification.
+# Formalization of the integer irreducibility results (Sections 2 and 3):
+# unconditional hardness and integer PP/PSPACE under explicit literature inputs.
 # The original Theorem 8 modules retain their historical names.
 #
 # Toolchain: leanprover/lean4:v4.34.0-rc2 (complexitylib's toolchain at the pinned commit).
